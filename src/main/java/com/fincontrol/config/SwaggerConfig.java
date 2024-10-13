@@ -17,8 +17,8 @@ public class SwaggerConfig {
     @Bean
     public OpenAPI openApi() {
         return new OpenAPI().info(new Info()
-            .title("title")
-            .description("description")
+            .title("Controle Financeiro")
+            .description("API para gestão de receitas e despesas")
             .version("Version: " + version + " - Git Hash: " + gitHash)
         );
     }
