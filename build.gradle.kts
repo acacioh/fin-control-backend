@@ -4,7 +4,7 @@ plugins {
 	id("io.spring.dependency-management") version "1.1.6"
 }
 
-group = "com.example"
+group = "com.fincontrol"
 version = "0.0.1-SNAPSHOT"
 
 java {
@@ -13,6 +13,9 @@ java {
 	}
 }
 
+val openApiVersion = "2.6.0"
+val lombokVersion = "1.18.34"
+
 repositories {
 	mavenCentral()
 }
@@ -20,9 +23,17 @@ repositories {
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+
+	implementation("org.projectlombok:lombok:$lombokVersion")
+
+	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:$openApiVersion")
+
+	annotationProcessor("org.projectlombok:lombok:$lombokVersion")
+
 	runtimeOnly("org.postgresql:postgresql")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
+
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
 tasks.withType<Test> {

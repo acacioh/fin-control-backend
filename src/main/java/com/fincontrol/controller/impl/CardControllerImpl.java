@@ -6,4 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CardControllerImpl implements CardController {
 
+    @Override
+    public void delete(Long id) {
+
+    }
 }
