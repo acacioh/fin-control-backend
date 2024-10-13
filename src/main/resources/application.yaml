@@ -1,0 +1,8 @@
+spring:
+
+server:
+  port: 8080
+
+logging:
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level - %msg%n'

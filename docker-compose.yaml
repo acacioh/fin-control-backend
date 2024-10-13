@@ -1,0 +1,9 @@
+services:
+  fin-control-db:
+    image: "postgres:latest"
+    environment:
+      POSTGRES_USER: "username"
+      POSTGRES_PASSWORD: "pass"
+      POSTGRES_DB: "fin-control"
+    ports:
+      - "5432:5432"
